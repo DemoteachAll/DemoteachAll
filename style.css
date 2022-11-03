@@ -2,38 +2,55 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-    background-color:tomato;
+
 }
 
-ul{
-    /* height: 100%; */
-/*MARGIN was declared to enable the BULLET show*/
-    width: 100%;
-    text-decoration: none; /*TEXT DECORATION do help remove the underline from a TEXT*/
-    list-style: none; /*LIST STYLE  do help remove the BULLET OR NUMBER from a TEXT*/
-    line-height: 45px;
-    display: flex;
-  
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* the formula is PTLT*/
+    background: url(1.jpg);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px 10px; /* in BOX SHADOW, you need to decare  RGBA*, then try any of 4 other dimensions outside */
+} 
+
+.middle h2{
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 10px solid pink;
+    line-height: 25px;
 }
 
-li{
+.middle p{
     color: white;
-    padding-left: 30px;
-    background-color: crimson;
+    line-height: 28px;
+}
+
+form input{
+    color: white;
     font-weight: bold;
-    width: 100%;
-    
-  
-}
-
-/* Hover means that when the MOUSE moves over a text, what should happen */
-li:hover{
-    background-color: white;
+    width: 150px; /* padding performs the function of width and height automatically*/
+    height: 40px;
+    border-radius: 15px;
+    letter-spacing: 3px;
+    border: none;
+    margin-right: 50px;
+    margin-bottom: 10px;
     cursor: pointer;
-    color: #663399;
 }
 
-/* if you want the LIST TO DISPLAY in HORIZONTAL format
-declare a 
-DISPLAY FLEX to line 16*/
+form .btnDownload{
+    background-color: green;
+}
+
+form .btn{
+    background-color: green;
+}
+
+form .btnDismiss{
+    background-color: red;
+}
