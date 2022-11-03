@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceBetweenButtons</title>
+    <title>Enquiry</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/32498d7ce2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="middle">
-    <h2>Update Available</h2>
-    <p>Firefox could'nt update automatically. Download the new version - you won't lose saved information or customizations.</p><br>
-<form>
-    <input type="button" type="button" value="Download" class="btnDownload">
-    <input type="button" type="button" value="Dismiss" class="btnDismiss">
-</form>
-</div>
+    <div class="container">
+        <i class="fa-solid fa-thumbs-up fa-5x"></i>
+        <form onsubmit="sendEmail( ); reset( ); return false;">
+            <h3>Enquiry Form</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="text" id="phone" placeholder="Phone no" required>
+<textarea id="message" rows="4" placeholder="How can we help you"></textarea>
+        <button type="submit">Send</button>
+</form> 
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+        function sendEmail( ){
+            Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "econmteach@gmail.com",
+                    Password : "Teachstudent",
+                    To : 'avinashkrdm@gmail.com',
+                    From : document.getElementById("email").value,
+                    Subject : "New Contact Form Enquiry",
+                    Body : "And this is the body"
+        }).then(
+        message => alert(message)
+            );
+     }
+</script>
 </body>
 </html>
