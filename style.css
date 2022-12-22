@@ -1,33 +1,235 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
-    background-color:tomato;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+   /* background-image: linear-gradient(rgba(230, 22, 74, 0.9),rgba(12, 14, 12, 0.9)), url(1.jpg); */
+   background-image: linear-gradient(rgb(11, 11, 68), rgb(122, 56, 56));
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
 }
 
-ul{
-    height: 100%;
-    margin: 15px; /*MARGIN was declared to enable the BULLET show*/
-    width: 200px;
-    text-decoration: none; /*TEXT DECORATION do help remove the underline from a TEXT*/
-    list-style: none; /*LIST STYLE  do help remove the BULLET OR NUMBER from a TEXT*/
-    line-height: 45px;
-  
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* NAVIGATION SESSION starts here */
+nav{
+    width: 100%;
+    
 }
 
-li{
-    color: white;
-    padding-left: 30px;
-    background-color: crimson;
+nav ul{
+    /* margin-left: 15px; */
+    display: flex;
+    float: right;
+}
+
+nav ul li{
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* margin: 10px; */
+}
+
+nav ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: pink;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color: rgb(224, 224, 21);
+    color: crimson;
     font-weight: bold;
-    border-bottom: 2px ease green;
-  
+}
+/* NAVIGATION SESSION ends here */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+/* HOME GIPEX Training Consult Text starts here */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+#middleBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-/* Hover means that when the MOUSE moves over a text, what should happen */
-li:hover{
-    background-color: white;
+#middleBox h1{
+ color: pink;
+ font-weight:bold;
+ font-size: 5.5rem;
+ line-height: 50px;
+}
+
+span{
+    color: yellow;
+}
+#middleBox h3{
+    color: pink;
+    font-weight:bold;
+    font-size: 2rem;
+    line-height: 50px;
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+   }
+
+ #middleBox p{
+    color: yellow;
+    font-size: 1rem;
+    margin-bottom: 25px;
+   }
+
+button{
+    border: none;
+    outline: none;
+    width: 50%;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 15px;
+    font-weight: bold;
     cursor: pointer;
-    color: rebeccapurple;
+}
+
+
+header h1{
+    float: left;
+    padding: 8px 18px 30px 120px;
+    color: pink;
+    text-align: center;
+}
+
+/* HOME GIPEX Training Consult Text ENDS here */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+/* ABOUT US starts here */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+#aboutmiddleBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#aboutmiddleBoxFlex{
+    display: flex;
+}
+#aboutmiddleBoxFlex .aboutBox1{
+  width: 200px;
+  height: 120px;
+   background-color: whitesmoke;
+}
+
+#aboutmiddleBoxFlex .aboutBox2{
+    width: 800px;
+    height: 120px;
+    background-color: green;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+ }
+
+ #aboutmiddleBoxFlex .aboutBox3{
+    width: 200px;
+    height: 120px;
+     background-color: whitesmoke;
+     
+  }
+  
+  #aboutmiddleBoxFlex .aboutBox4{
+    width: 800px;
+    height: 120px;
+    background-color: green;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+   }
+/* ABOUT US ends here */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PHONE DEVICES SET TO 600*/
+@media screen and (max-width: 600px){
+   body{
+    background-image: linear-gradient(rgba(0, 3, 1, 0.9),rgba(12, 14, 12, 0.9)), url(1.jpg);
+   } 
+	#middleBox h1{
+       color: orange;
+       line-height: 60px;
+       /* margin-bottom: 10px; */
+       }
+    
+    #middleBox span{
+        color: whitesmoke;
+        line-height: 35px;
+        font-weight: bold;
+        /* margin-bottom: 40px; */
+    } 
+} 
+
+@media screen and (max-width:571px){  /*max-width:571 means from one to 571*/
+    nav ul{
+        /* margin-left: 15px; */
+        display: flex;
+        text-align: center;
+    }
+
+    nav ul li{
+        list-style: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* margin: 10px; */
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        list-style: none;
+        color: pink;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    nav ul li a:hover{
+        background-color: rgb(224, 224, 21);
+        color: crimson;
+        font-weight: bold;
+    }
 }
